@@ -13,6 +13,8 @@ Then 'overwrite' the score adding one each time + is clicked...
 <i>now the same for " - " <--- cute eyelashes> </i>
 <--> created 'handleClickOnMinus' to decrease the score by one each time - is clicked
 
+<--> added a "team win" window and prevent from going lower that 0
+
 Parent: class team1 team2
 child: i.add
 

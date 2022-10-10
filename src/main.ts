@@ -21,6 +21,11 @@ fieldInput?.addEventListener('input', newNameInput)
 /* -----------------end name element -----------------*/
 
 function handleClickOnPlus() {
+  if (teamScore === 21) {
+    console.debug('Wooooah')
+    alert(`${targetHTwo.innerHTML} is first to 21 & wins!`)
+    return
+  }
   teamScore = teamScore + 1
 
   if (teamScoreValue instanceof HTMLElement) {
@@ -34,6 +39,10 @@ plusButton?.addEventListener('click', handleClickOnPlus)
 /*---------------- end plus button -------------------*/
 
 function handleClickOnMinus() {
+  if (teamScore === 0) {
+    console.debug('cukup!')
+    return
+  }
   teamScore = teamScore - 1
 
   if (teamScoreValue instanceof HTMLElement) {
