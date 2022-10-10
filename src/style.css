@@ -1,4 +1,10 @@
 :root {
+  --header-background-color: #4f3e1d;
+  --header-text-color: #cfa14c;
+  --main-text-color: #423419;
+  --main-background-color: #cfa14c;
+  --border-color: #826530;
+  font-family: 'Rubik', sans-serif;
   font: 16px / 1 sans-serif;
 }
 
@@ -9,26 +15,37 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #f1e6eb;
-  color: #2b303a;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+header {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  padding: 0.5em;
+  text-align: center;
 }
 
+header h1 {
+  color: var(--header-text-color);
+}
 h1 {
   text-align: center;
-  font-family: Monospace;
-  margin: 1rem 0 3rem 0;
+  font-family: 'Rubik';
+  font-weight: 500;
+  margin: 1rem 0;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 2rem;
 }
 
 section {
   min-width: 20rem;
-  border: thin solid #7c7c7c;
-  border-radius: 0.3rem;
+  border: medium solid var(--border-color);
+  border-radius: 1.2rem;
   margin-bottom: 3rem;
 
   display: flex;
@@ -43,8 +60,19 @@ section p {
 
 section h3 {
   margin: 1rem 0;
-  font-family: Monospace;
+  font-family: 'Rubik';
+  font-weight: 500;
   font-size: 3rem;
+}
+
+/* button {
+  border-radius: 999px;
+  border: none;
+} */
+
+.field {
+  background-color: #ebd4a9;
+  border-radius: 0.4rem;
 }
 
 fieldset {
@@ -62,9 +90,10 @@ fieldset i {
 }
 
 fieldset i.add {
-  color: green;
+  color: #8f6f35;
+  border-radius: 999px;
 }
 
 fieldset i.subtract {
-  color: #f64545;
+  color: #f53131;
 }
