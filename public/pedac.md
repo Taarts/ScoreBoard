@@ -13,9 +13,36 @@ Then 'overwrite' the score adding one each time + is clicked...
 <i>now the same for " - " <--- cute eyelashes> </i>
 <--> created 'handleClickOnMinus' to decrease the score by one each time - is clicked
 
-<--> added a "team win" window and prevent from going lower that 0
-
 Parent: class team1 team2
 child: i.add
 
 - Deploy your site.
+
+Part 2:
+
+-     Add an if statement to stop each team's score from going below 0.
+-     Add an if statement to stop each team's score from going above 21.
+-     When a team gets 21 points, display a message to the user of who won.
+
+  <--> added a "team win" window @21 and prevent from going lower that 0
+
+-     Add a reset button that resets the scoreboard back to each team having 0 points.
+
+  <--> reset properties work,
+  <--> added reset button
+  main {
+  display: flex;
+  gap: 1rem; //added
+  flex-flow: row wrap;
+  justify-content: center; //changed to "center"
+  padding: 2rem;
+  }
+
+  button {
+  /_ display: flex; _/
+  align-self: flex-end;
+  justify-content: center;
+  border-radius: 999px;
+  border: none;
+  padding: 0.3rem 1rem;
+  }

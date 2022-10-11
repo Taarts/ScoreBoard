@@ -37,9 +37,20 @@ h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  gap: 1rem; /* added */
+  flex-flow: row wrap;
+  justify-content: center; /*changed to "center" */
   padding: 2rem;
+}
+
+button {
+  /* display: flex; */
+  font-weight: 700;
+  align-self: flex-end;
+  justify-content: center;
+  border-radius: 999px;
+  border: 2px solid var(--border-color);
+  padding: 0.3rem 1rem;
 }
 
 section {
@@ -64,11 +75,6 @@ section h3 {
   font-weight: 500;
   font-size: 3rem;
 }
-
-/* button {
-  border-radius: 999px;
-  border: none;
-} */
 
 .field {
   background-color: #ebd4a9;

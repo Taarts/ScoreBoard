@@ -6,9 +6,9 @@ const targetHTwo = document.querySelector('.team1 h2')!
 const plusButton = document.querySelector('.add')
 const minusButton = document.querySelector('.subtract')
 const teamScoreValue = document.querySelector('.team1 h3')!
-// const freshInputs = document.querySelectorAll('input')!
+const resetButton = document.querySelector('.reset') as HTMLButtonElement
+const header = document.querySelector('h1')!
 
-// freshInputs.forEach((input) => (input.value = ''))
 function newNameInput(event: Event) {
   const changeName = event.target
 
@@ -24,6 +24,7 @@ function handleClickOnPlus() {
   if (teamScore === 21) {
     console.debug('Wooooah')
     alert(`${targetHTwo.innerHTML} is first to 21 & wins!`)
+    header.textContent = `${targetHTwo.innerHTML} wins this round!`
     return
   }
   teamScore = teamScore + 1
@@ -53,3 +54,12 @@ function handleClickOnMinus() {
 
 minusButton?.addEventListener('click', handleClickOnMinus)
 /*---------------- end minus button -------------------*/
+
+function handleScoreReset(event: Event) {
+  teamScore = 0
+  teamScoreValue.innerHTML = teamScore.toString()
+  console.log('reset')
+}
+resetButton?.addEventListener('click', handleScoreReset)
+
+/*---------------- end reset score -------------------*/
