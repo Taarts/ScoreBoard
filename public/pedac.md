@@ -46,3 +46,6 @@ Part 2:
   border: none;
   padding: 0.3rem 1rem;
   }
+
+Reset button works!
+Both scoreboards are operational and the scoreboard title changes when a team wins
