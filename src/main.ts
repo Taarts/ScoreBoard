@@ -11,6 +11,7 @@ function setupTeam(id: string) {
   )! as HTMLHeadingElement
   const resetButton = document.querySelector('.reset') as HTMLButtonElement
   const header = document.querySelector('h1')!
+  // const timerClass = document.querySelector('.timer')
 
   function newNameInput(event: Event) {
     const changeName = event.target
@@ -68,5 +69,38 @@ function setupTeam(id: string) {
 
   /*---------------- end reset score -------------------*/
 }
+function initializeClock() {
+  let period = 1
+  let seconds = 50
+  let clock = document.getElementById('#timer')
+  let minutesSpan = clock?.querySelector('#minutes')
+  let secondsSpan = clock?.querySelector('#seconds')
+  let timer: number
+
+  function updateClock() {
+    seconds--
+    if (period > 4) {
+      clearInterval(timer)
+      seconds = 0
+    }
+    if (seconds === 0 && period <= 4) {
+      seconds = 10
+      period++
+
+      const lis = document.querySelector(`#quarter $(period)`) as HTMLLIElement
+      lis.forEach((li) => li.classList.remove('active'))
+
+      document.querySelectorAll('#quarters li') as NodeListOf<HTMLLIElement>
+      li.classList.add('active')
+    }
+    minutesSpan!.innerHTML = Math.floor(seconds / 60).toString()
+    // .padStart(2, '0')
+    secondsSpan!.innerHTML = (seconds % 60).toString()
+  }
+  updateClock()
+  setInterval(updateClock, 1000)
+}
+
+initializeClock()
 setupTeam('team1')
 setupTeam('team2')

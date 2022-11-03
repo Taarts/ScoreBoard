@@ -19,39 +19,50 @@
   <body>
     <header>
       <h1>My Score Board</h1>
+      <div id="timer">
+        <h2 id="minutes">10</h2>
+        <h2>:</h2>
+        <h2 id="seconds">00</h2>
+      </div>
     </header>
     <main>
-      <section id="team" class="team1">
-        <h2>Team 1</h2>
-        <h3>0</h3>
-        <fieldset>
-          <input class="field" type="text" placeholder="Name" />
-        </fieldset>
+      <container>
+        <section id="team" class="team1">
+          <h2>Team 1</h2>
+          <h3>0</h3>
+          <fieldset>
+            <input class="field" type="text" placeholder="Name" />
+          </fieldset>
 
-        <fieldset>
-          <!-- <button> -->
-          <i class="add fas fa-2x fa-plus-circle"></i>
-          <!-- </button> -->
-          <!-- <button> -->
-          <i class="subtract fas fa-2x fa-minus-circle"></i>
-          <!-- </button> -->
-        </fieldset>
-      </section>
+          <fieldset>
+            <i class="add fas fa-2x fa-plus-circle"></i>
+            <i class="subtract fas fa-2x fa-minus-circle"></i>
+          </fieldset>
+        </section>
+        <div id="period">
+          <h3 id="unstyled">Period</h3>
+          <ul id="quarters">
+            <li id="quarter1" class="active">1</li>
+            <li id="quarter2" class="active">2</li>
+            <li id="quarter3" class="active">3</li>
+            <li id="quarter4" class="active">4</li>
+          </ul>
+        </div>
+        <section id="team" class="team2">
+          <h2>Team 2</h2>
+          <h3>0</h3>
+
+          <fieldset>
+            <input class="field" type="text" placeholder="Name" />
+          </fieldset>
+
+          <fieldset>
+            <i class="add fas fa-2x fa-plus-circle"></i>
+            <i class="subtract fas fa-2x fa-minus-circle"></i>
+          </fieldset>
+        </section>
+      </container>
       <button class="reset">R E S E T</button>
-
-      <section id="team" class="team2">
-        <h2>Team 2</h2>
-        <h3>0</h3>
-
-        <fieldset>
-          <input class="field" type="text" placeholder="Name" />
-        </fieldset>
-
-        <fieldset>
-          <i class="add fas fa-2x fa-plus-circle"></i>
-          <i class="subtract fas fa-2x fa-minus-circle"></i>
-        </fieldset>
-      </section>
     </main>
 
     <script type="module" src="/src/main.ts" charset="utf-8"></script>

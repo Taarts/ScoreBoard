@@ -5,7 +5,7 @@
   --main-background-color: #cfa14c;
   --border-color: #826530;
   font-family: 'Rubik', sans-serif;
-  font: 16px / 1 sans-serif;
+  /* font: 16px / 1 sans-serif; */
 }
 
 html {
@@ -21,32 +21,59 @@ body {
 header {
   background-color: var(--header-background-color);
   color: var(--header-text-color);
-  padding: 0.5em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
   text-align: center;
+  padding: 0.5em;
 }
 
 header h1 {
   color: var(--header-text-color);
 }
 h1 {
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Rubik';
   font-weight: 500;
   margin: 1rem 0;
 }
 
 main {
+  border: 1px solid red;
   display: flex;
   gap: 1rem; /* added */
-  flex-flow: row wrap;
-  justify-content: center; /*changed to "center" */
-  padding: 2rem;
+  flex-flow: column wrap;
+  justify-content: space-evenly; /*changed to "center" */
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 10rem 5rem 10rem;
+}
+
+#timer {
+  border: 2px solid greenyellow;
+  display: flex;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0.2rem;
+  justify-content: center;
+}
+
+container {
+  border: 2px solid blue;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button {
   /* display: flex; */
   font-weight: 700;
-  align-self: flex-end;
+  align-self: center;
   justify-content: center;
   border-radius: 999px;
   border: 2px solid var(--border-color);
@@ -62,6 +89,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#quarters li {
+  text-decoration: none;
 }
 
 section h2,

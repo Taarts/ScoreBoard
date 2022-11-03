@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="module">import { inject } from "/@vite-plugin-checker-runtime";
+inject({
+  overlayConfig: {},
+  base: "/",
+});</script>
+
+    <script type="module" src="Roshambo_files/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Roshambo_files/style.css">
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/TA-logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="Roshambo_files/css2.css" rel="stylesheet">
+    <title>Roshambo</title>
+  <style type="text/css">:root {
+  --header-bckgd-color: #474d64;
+  --header-text-color: #d3df99;
+  --player1-bckgd-color: #474d64;
+  --player1-text-color: #8df099;
+  --player2-bckgd-color: #a371c7;
+  --player2-text-color: #474d64;
+  --bckgd-color-main: #9d8ba3;
+  --select-button-color: yellow;
+  font-family: 'Inter', sans-serif;
+  /* color: ; */
+}
+
+body {
+  background-color: var(--bckgd-color-main);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header h1 {
+  color: var(--header-text-color);
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--header-bckgd-color);
+}
+container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+h1 {
+  font-size: 2rem;
+  color: #474d64;
+}
+
+section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+button {
+  font-weight: 700;
+  background-color: #474d64;
+  align-self: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 2px solid var(--border-color);
+  padding: 0.3rem 1rem;
+  margin: 1rem;
+}
+
+button.active {
+  background-color: var(--select-button-color);
+}
+
+.game-buttons {
+  display: none;
+}
+</style></head>
+  <body>
+    <header>
+      <h1 class="header">Roshambo</h1>
+      <button>S T A R T</button>
+    </header>
+    <container>
+      <section class="player1">
+        <!-- player 1 -->
+        <h1>Player 1</h1>
+        <div class="Roshambo">
+          <button id="rock">ROCK</button>
+          <button class="paper">PAPER</button>
+          <button class="scissors">SCISSORS</button>
+        </div>
+      </section>
+
+      <section class="player2">
+        <!-- player 2 -->
+        <h1>Player 2</h1>
+        <div class="Roshambo">
+          <button id="rock">ROCK</button>
+          <button class="paper">PAPER</button>
+          <button class="scissors">SCISSORS</button>
+        </div>
+      </section>
+      <div class="result"></div>
+      <button id="restart">play again?</button>
+    </container>
+    <script type="module" src="Roshambo_files/main.ts"></script>
+  
+
+<vite-plugin-checker-error-overlay></vite-plugin-checker-error-overlay></body></html>
