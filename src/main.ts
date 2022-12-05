@@ -61,9 +61,10 @@ function setupTeam(id: string) {
 
   function handleScoreReset(_event: Event) {
     teamScore = 0
+    // fieldInput = fieldInput.value = '' - was hoping to get the placeholder text to show up again
     header.innerText = 'The Score Board'
     teamScoreValue.innerHTML = teamScore.toString()
-    console.log('reset')
+    // console.log('reset')
   }
   resetButton?.addEventListener('click', handleScoreReset)
 
