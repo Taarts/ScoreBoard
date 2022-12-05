@@ -1,5 +1,5 @@
 :root {
-  --header-background-color: #4f3e1d;
+  --header-background-color: #664c17;
   --header-text-color: #cfa14c;
   --main-text-color: #423419;
   --main-background-color: #cfa14c;
@@ -7,7 +7,9 @@
   font-family: 'Rubik', sans-serif;
   /* font: 16px / 1 sans-serif; */
 }
-
+* {
+  box-sizing: border-box;
+}
 html {
   height: 100%;
 }
@@ -17,6 +19,8 @@ body {
   min-height: 100%;
   background-color: var(--main-background-color);
   color: var(--main-text-color);
+  align-items: center;
+  justify-content: center;
 }
 header {
   background-color: var(--header-background-color);
@@ -61,13 +65,21 @@ main {
 container {
   border: 2px solid blue;
   width: 80%;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 0.2rem;
   border-radius: 0.7rem;
+  display: flex;
+  /* flex-flow: row nowrap; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+#centered-section {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-inline: auto;
 }
 
 button {
@@ -83,6 +95,7 @@ button {
 section {
   min-width: 20rem;
   border: medium solid var(--border-color);
+  background-color: #e2ddd6;
   border-radius: 1.2rem;
   margin-bottom: 3rem;
 
@@ -90,7 +103,7 @@ section {
   flex-direction: column;
   align-items: center;
 }
-#quarters li {
+#unstyled #quarters li {
   text-decoration: none;
 }
 
@@ -107,7 +120,7 @@ section h3 {
 }
 
 .field {
-  background-color: #ebd4a9;
+  background-color: #eecf96;
   border-radius: 0.4rem;
 }
 
@@ -126,10 +139,10 @@ fieldset i {
 }
 
 fieldset i.add {
-  color: #8f6f35;
+  color: #141413;
   border-radius: 999px;
 }
 
 fieldset i.subtract {
-  color: #f53131;
+  color: #f5ba31;
 }
