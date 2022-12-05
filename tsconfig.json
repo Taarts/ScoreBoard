@@ -3,7 +3,7 @@
     "target": "ES6",
     "useDefineForClassFields": true,
     "module": "ES6",
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES2017", "DOM"],
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,

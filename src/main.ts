@@ -26,7 +26,7 @@ function setupTeam(id: string) {
 
   function handleClickOnPlus() {
     if (teamScore === 21) {
-      console.debug('Wooooah')
+      // console.debug('Wooooah')
       alert(`${targetHTwo.innerHTML} is first to 21 & wins!`)
       header.textContent = `${targetHTwo.innerHTML} wins this round!`
       return
@@ -45,7 +45,7 @@ function setupTeam(id: string) {
 
   function handleClickOnMinus() {
     if (teamScore === 0) {
-      console.debug('cukup!')
+      // console.debug('cukup!') means "enough!"
       return
     }
     teamScore = teamScore - 1
@@ -61,7 +61,7 @@ function setupTeam(id: string) {
 
   function handleScoreReset(_event: Event) {
     teamScore = 0
-    header.innerText = 'My Score Board'
+    header.innerText = 'The Score Board'
     teamScoreValue.innerHTML = teamScore.toString()
     console.log('reset')
   }
@@ -71,10 +71,10 @@ function setupTeam(id: string) {
 }
 function initializeClock() {
   let period = 1
-  let seconds = 50
-  let clock = document.getElementById('#timer')
-  let minutesSpan = clock?.querySelector('#minutes')
-  let secondsSpan = clock?.querySelector('#seconds')
+  let seconds = 600
+  var clock = document.getElementById('timer')
+  var minutesSpan = clock?.querySelector('#minutes')
+  var secondsSpan = clock?.querySelector('#seconds')
   let timer: number
 
   function updateClock() {
@@ -87,15 +87,16 @@ function initializeClock() {
       seconds = 10
       period++
 
-      const lis = document.querySelector(`#quarter $(period)`) as HTMLLIElement
-      lis.forEach((li) => li.classList.remove('active'))
+      // const lis = document.querySelector(`#quarter $(period)`) as HTMLLIElement
+      // lis.forEach((li) => li.classList.remove('active'))
 
-      document.querySelectorAll('#quarters li') as NodeListOf<HTMLLIElement>
-      li.classList.add('active')
+      // document.querySelectorAll('#quarters li') as NodeListOf<HTMLLIElement>
+      // li.classList.add('active')
     }
-    minutesSpan!.innerHTML = Math.floor(seconds / 60).toString()
-    // .padStart(2, '0')
-    secondsSpan!.innerHTML = (seconds % 60).toString()
+    minutesSpan!.innerHTML = Math.floor(seconds / 60)
+      .toString()
+      .padStart(2, '0')
+    secondsSpan!.innerHTML = (seconds % 60).toString().padStart(2, '0')
   }
   updateClock()
   setInterval(updateClock, 1000)
